@@ -1,4 +1,0 @@
-clothdb
-=======
-
-the dress database
