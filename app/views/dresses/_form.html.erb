@@ -1,0 +1,71 @@
+<%= form_for(@dress) do |f| %>
+  <% if @dress.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dress.errors.count, "error") %> prohibited this dress from being saved:</h2>
+
+      <ul>
+      <% @dress.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+   <div class="field">
+    <%= f.label :brand %><br />
+    <%= f.text_field :brand %>
+  </div>
+   <div class="field">
+    <%= f.label :sizing %><br />
+    <%= f.text_field :sizing %>
+  </div>
+   <div class="field">
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </div>
+   <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+   <div class="field">
+    <%= f.label :fans %><br />
+    <%= f.text_field :fans %>
+  </div>
+  <div class="field">
+    <%= f.label :fabric %><br />
+    <%= f.text_field :fabric %>
+  </div>
+   <div class="field">
+    <%= f.label :neck_type %><br />
+    <%= f.text_field :neck_type %>
+  </div>
+   <div class="field">
+    <%= f.label :sleeve_type %><br />
+    <%= f.text_field :sleeve_type %>
+  </div>
+   <div class="field">
+    <%= f.label :neckline %><br />
+    <%= f.text_field :neckline %>
+  </div>
+   <div class="field">
+    <%= f.label :skirt_type %><br />
+    <%= f.text_field :skirt_type %>
+  </div>
+   <div class="field">
+    <%= f.label :skirt_length %><br />
+    <%= f.text_field :skirt_length %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

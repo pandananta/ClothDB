@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fabric:</b>
+  <%= @dress.fabric %>
+</p>
+
+<p>
+  <b>Neckline:</b>
+  <%= @dress.neckline %>
+</p>
+
+
+<%= link_to 'Edit', edit_dress_path(@dress) %> |
+<%= link_to 'Back', dresses_path %>
