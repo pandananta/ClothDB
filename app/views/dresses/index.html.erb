@@ -22,14 +22,15 @@
 <%= link_to 'New Dress', new_dress_path %> 
 -->
 
-<div id="filter_bar">
- 
-</div>
-
+<div id="filter_bar"></div>
 
 <% @dresses.each do |dress| %>
-<div class="card">
+
+<%= link_to dress do %>
+  <div class="card">
   <%= image_tag("silhouette.jpeg", class:'card_image')%>
-   
  </div>
+<% end  %>
+
+
 <% end %>
