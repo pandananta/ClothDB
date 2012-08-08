@@ -2,8 +2,7 @@ class DressesController < ApplicationController
   # GET /dresses
   # GET /dresses.json
   def index
-    @dresses = Dress.all
-
+    @dresses = Dress.page(params[:page]).per(8)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @dresses }

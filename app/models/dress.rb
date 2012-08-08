@@ -19,5 +19,4 @@ class Dress < ActiveRecord::Base
   validates :skirt_type,  :presence => true
   validates :skirt_length,  :presence => true
 =end
-
 end
