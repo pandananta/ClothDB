@@ -11,11 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120724213545) do
+ActiveRecord::Schema.define(:version => 20120816024118) do
 
   create_table "dresses", :force => true do |t|
     t.string   "fabric"
-    t.string   "neckline"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.string   "source"
