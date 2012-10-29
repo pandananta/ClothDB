@@ -5,7 +5,9 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+gem 'sqlite3'
+
+gem 'rails_admin'
 
 
 # Gems used only for assets and not required
@@ -38,3 +40,6 @@ gem 'has_scope'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+
+gem "devise"

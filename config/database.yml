@@ -4,11 +4,10 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   database: clothdb_dev
   pool: 5
-  username: postgres
   password:
 
 # Warning: The database defined as "test" will be erased and
