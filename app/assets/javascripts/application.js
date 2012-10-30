@@ -12,4 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.isotope.min
 //= require_tree .
+
+$('#dress_container').isotope({
+  itemSelector : '.card',
+  layoutMode : 'fitRows'
+});
+$('#dress_container').isotope('shuffle');

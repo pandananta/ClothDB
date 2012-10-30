@@ -1,13 +1,11 @@
-<%= link_to dress do %>
+
 	<div class="card">
-		<div class="image">	
-			<%= image_tag(dress.image)%>
-		</div>
-		<!-- <div class = "title">
-			<%= dress.image %>
-		</div> -->
-		
+		<%= link_to dress do %>
+			<div class="image">	
+				<%= image_tag(dress.image)%>
+			</div>
+		<% end  %>
  	</div>
-<% end  %>
+
 
 
