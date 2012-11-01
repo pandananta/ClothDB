@@ -1,0 +1,7 @@
+%h2= @dress.title
+%div
+  = image_tag @dress.image, {:height => 300}
+= render 'form'
+= link_to 'Show', @dress
+|
+\#{link_to 'Back', dresses_path}

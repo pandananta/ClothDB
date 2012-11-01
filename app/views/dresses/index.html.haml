@@ -1,0 +1,7 @@
+#dresses
+  #filter_panel
+  .pagination
+    = paginate @dresses
+  #dress_container
+    - @dresses.each do |dress|
+      = render "dress", dress:dress

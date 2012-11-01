@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title ClothDB
+    = stylesheet_link_tag    "application", :media => "all"
+    = csrf_meta_tags
+  %body
+    .container
+      %h1
+        = link_to 'clothDB', root_path, id: 'logo'
+      #logo_line
+      
+      = yield
+      
+      = javascript_include_tag "application"
+
+
