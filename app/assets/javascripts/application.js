@@ -15,8 +15,18 @@
 //= require jquery.isotope.min
 //= require bootstrap
 
-$('#dress_container').isotope({
+var $container = $('#dress_container');
+
+$container.isotope({
   itemSelector : '.card',
-  layoutMode : 'fitRows'
+  sortBy : 'random'
+  
 });
-$('#dress_container').isotope('shuffle');
+
+
+// filter items when filter link is clicked
+$('#filters a').click(function(){
+  var selector = $(this).attr('data-filter');
+  $container.isotope({ filter: selector });
+  return false;
+});

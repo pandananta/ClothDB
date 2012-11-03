@@ -11,7 +11,7 @@ class DressesController < ApplicationController
   # GET /dresses
   # GET /dresses.json
   def index
-    @dresses = apply_scopes(Dress).page(params[:page]).per(8)
+    @dresses = apply_scopes(Dress).page(params[:page]).per(50)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @dresses }

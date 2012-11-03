@@ -1,4 +1,4 @@
-.card
+.card{:class => "#{dress.fabric.downcase} price-#{dress.price}"}
   = link_to dress do
     .image
       = image_tag(dress.image)

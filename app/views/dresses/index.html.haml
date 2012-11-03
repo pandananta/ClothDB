@@ -1,7 +1,17 @@
 #dresses
   #filter_panel
+    %ul#filters
+      %li
+        %a{"data-filter" => "*", :href => "#"} show all
+      %li
+        %a{"data-filter" => ".silk", :href => "#"} silk
+      %li
+        %a{"data-filter" => ".polyester", :href => "#"} polyester
+      %li
+        %a{"data-filter" => ".cashmere", :href => "#"} cashmere
+
   .pagination
-    = paginate @dresses
+    = paginate @dresses 
   #dress_container
     - @dresses.each do |dress|
       = render "dress", dress:dress

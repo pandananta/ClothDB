@@ -6,8 +6,11 @@
     = csrf_meta_tags
   %body
     .container
-      %h1
-        = link_to 'clothDB', root_path, id: 'logo'
+      #header
+        %h1
+          = link_to 'clothDB', root_path, id: 'logo'
+        %h2
+          BETA  
       #logo_line
       
       = yield
