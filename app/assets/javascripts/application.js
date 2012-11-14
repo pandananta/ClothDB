@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.isotope.min
+//= require jquery.fancybox.js
+//= require jquery.fancybox.pack.js
 //= require bootstrap
 
 var $container = $('#dress_container');
@@ -31,10 +33,6 @@ $('#filters a').click(function(){
   return false;
 });
 
-$(document).ready(function() {
-
-	
+$(document).ready(function() {	
 	$("a.grouped_elements").fancybox();
-
-	
 });
