@@ -17,6 +17,8 @@
 //= require jquery.fancybox.pack.js
 //= require bootstrap
 
+
+
 var $container = $('#dress_container');
 
 $container.isotope({
@@ -34,5 +36,10 @@ $('#filters a').click(function(){
 });
 
 $(document).ready(function() {	
-	$("a.fancybox").fancybox();
+	$(".fancybox").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none'
+		
+	});
+
 });

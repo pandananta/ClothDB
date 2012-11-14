@@ -1,3 +1,3 @@
 .card{:class => "#{dress.fabric.downcase} price-#{dress.price}"}
-  %a#grouped_elements{:href => dress_path(dress)}
+  %a{:class => "#{"fancybox"} #{"fancybox.ajax"}",:href => dress_path(dress), :rel => "dress gallery"}
     %img{:src => dress.image}/
