@@ -34,5 +34,5 @@ $('#filters a').click(function(){
 });
 
 $(document).ready(function() {	
-	$("a.grouped_elements").fancybox();
+	$("a.fancybox").fancybox();
 });
