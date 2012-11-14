@@ -1,10 +1,43 @@
 %p#notice= notice
-%p
-  %b Fabric:
-  = @dress.fabric
-%p
-  %b Source:
-  = link_to "source", @dress.source
-= link_to 'Edit', edit_dress_path(@dress)
-|
-\#{link_to 'Back', dresses_path}
+
+
+
+
+#dress-attibutes
+  %img{:src => @dress.image}/
+  .info
+    %p
+      %b Title:
+      = @dress.title
+    %p
+      %b Brand:
+      = @dress.brand
+    %p
+      %b Sizing:
+      = @dress.sizing
+    %p
+      %b Price:
+      = @dress.price
+    %p
+      %b Fans:
+      = @dress.fans    
+    %p
+      %b Fabric:
+      = @dress.fabric
+    %p
+      %b Neck Type:
+      = @dress.neck_type
+    %p
+      %b Sleeve Type:
+      = @dress.sleeve_type
+    %p
+      %b Skirt Type:
+      = @dress.skirt_type
+    %p
+      %b Skirt Length:
+      = @dress.skirt_length  
+    %p
+      %b Like it?:
+      = link_to "Buy!", @dress.source
+
+

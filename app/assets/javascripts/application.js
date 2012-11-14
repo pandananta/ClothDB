@@ -30,3 +30,11 @@ $('#filters a').click(function(){
   $container.isotope({ filter: selector });
   return false;
 });
+
+$(document).ready(function() {
+
+	
+	$("a.grouped_elements").fancybox();
+
+	
+});

@@ -3,6 +3,7 @@
 @import "isotope";
 
 
+
 #header{
 	background-color: #FFFFFF;
 }
@@ -57,6 +58,8 @@ li{
 
 }
 
+
+
 .container{
 	width:70%;
 	margin-top: 40px;
@@ -89,8 +92,17 @@ li{
 	color: #D3D3D3;}
 
 
+#dress-attibutes{
+	.info{
+		padding-left: 40px;
+		float:left;
+	}
+	img{
+		float:left;
+		max-height:350px;
 
-
+	}
+}
 
 #dresses{
 
@@ -110,6 +122,7 @@ li{
 		padding-top:10px;
 
 
+
 		.card{
 			border: 1px;
 			border-style: solid;
@@ -117,14 +130,17 @@ li{
 			border-color: #A9A9A9;
 			margin: 6px;
 			float: left;
+
 		}
 
-		.image img{
+		img{
 			width:218px;
+			
 		}
 
 		.card:hover{
 			border-color: #000000;
+
 		
 		}
 	

@@ -22,11 +22,7 @@ class DressesController < ApplicationController
   # GET /dresses/1.json
   def show
     @dress = Dress.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @dress }
-    end
+    render :layout => false
   end
 
   # GET /dresses/new
