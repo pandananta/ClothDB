@@ -38,8 +38,11 @@ $('#filters a').click(function(){
 $(document).ready(function() {	
 	$(".fancybox").fancybox({
 		openEffect	: 'none',
-		closeEffect	: 'none'
-		
+		closeEffect	: 'none',
+		closeBtn : true
+
 	});
+
+	$.fancybox.showLoading();
 
 });

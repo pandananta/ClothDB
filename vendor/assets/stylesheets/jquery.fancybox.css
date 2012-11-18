@@ -120,11 +120,13 @@
 }
 
 .fancybox-prev {
-	left: 0;
+	left: -70px;
+	width: 80px;
 }
 
 .fancybox-next {
-	right: 0;
+	right: -70px;
+	width: 80px;
 }
 
 .fancybox-nav span {

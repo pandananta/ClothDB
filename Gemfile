@@ -5,7 +5,7 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
 gem 'rails_admin'
 
 
@@ -27,6 +27,7 @@ gem 'jquery-rails'
 
 gem 'kaminari'
 gem 'has_scope'
+gem "spreadsheet", "~> 0.7.4"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -44,3 +45,11 @@ gem 'has_scope'
 
 
 gem "devise"
+
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg'
+end

@@ -1,4 +1,6 @@
 ClothDB::Application.routes.draw do
+  resources :dress_parsers
+
   devise_for :administrators
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
