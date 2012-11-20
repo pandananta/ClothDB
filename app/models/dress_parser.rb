@@ -1,7 +1,10 @@
 require 'spreadsheet'
+Spreadsheet.client_encoding = 'UTF-8'
+
 class DressParser < ActiveRecord::Base
 	attr_accessor :spreadsheet #creates 2 methods: getter and setter
 	attr_accessible :spreadsheet
+	
 	
 
 	def self.parse_and_create_dresses spreadsheet_file
@@ -16,10 +19,16 @@ class DressParser < ActiveRecord::Base
 		#loads file
 		#parses file into and array of hashes with the dress attributes from each row
 		#returns array  E.G [{source: 1, name: 'bigdress'}, {source: 2, name: 'mediumdress'}, {source: 3, name: 'littledress'}]
-		@workbook = Spreadsheet.open(spreadsheet_file)
+	
+		@workbook = Spreadsheet.open("../../Desktop/dress_2012-11-18_19h13m20.xls")
 		@worksheet = @workbook.worksheet(0)
 		dress_attribute_array = []
 		keys = @worksheet.row(0)
+
+		keys.each_with_index do |cell, i|
+  			keys[i]=cell.downcase.tr(" ", "_")
+  		end
+
 		1.upto(@worksheet.last_row_index) do |index|
   			# .row(index) will return the row which is a subclass of Array
   			row = @worksheet.row(index)
@@ -37,7 +46,7 @@ class DressParser < ActiveRecord::Base
 		#returns an array of Dress objects
 		dress_array = []
 		dress_attribute_array.each do |dress_attrs|
-			dress_array << Dress.create dress_attrs
+			dress_array << Dress.create(dress_attrs) 
 		end
 	end
 	

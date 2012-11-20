@@ -158,6 +158,6 @@ DEPENDENCIES
   rails (= 3.2.6)
   rails_admin
   sass-rails (~> 3.2.3)
-  spreadsheet (~> 0.7.4)
+  spreadsheet
   sqlite3
   uglifier (>= 1.0.3)
