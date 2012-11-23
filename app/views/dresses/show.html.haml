@@ -1,31 +1,27 @@
 %p#notice= notice
 
 
-
-
 #dress-attibutes
-  %img{:src => @dress.image}/
+  .dress-image-wrapper
+    %img{:src => @dress.image}/
   .info
+    %img.logo{:src => "http://assets.bloomingdales.com/img/nav/r09/topnav/l_mainLogo.gif"}/
+    %br
     %p
-      %b Title:
-      = @dress.title
+      %b
+        = @dress.title
     %p
-      %b Brand:
-      = @dress.brand
-    %p
-      %b Sizing:
-      = @dress.sizing
-    %p
-      %b Price:
-      = @dress.price
-    %p
-      %b Fans:
-      = @dress.fans    
+      by
+      = @dress.brand 
+      $$$
     %p
       %b Fabric:
-      = @dress.fabric 
+      = @dress.fabric    
     %p
-      %b Like it?:
-      = link_to "BUY!", @dress.source
+      %b Sizing:
+      = @dress.sizing  
+    %p
+      = link_to "Buy", @dress.source, :target => "_blank", :class=> "btn btn-success" 
+
 
 

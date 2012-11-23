@@ -1,20 +1,57 @@
 #dresses
   #filter_panel
-    %ul#filters
-      %li
-        %a{"data-filter" => "*", :href => "#"} show all
-      %li
-        %a{"data-filter" => ".silk", :href => "#"} silk
-      %li
-        %a{"data-filter" => ".polyester", :href => "#"} polyester
-      %li
-        %a{"data-filter" => ".cashmere", :href => "#"} cashmere
-      %li
-        %a{"data-filter" => ".cotton", :href => "#"} cotton
+    .btn-group
+      %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+        Fabric
+        %span.caret
+      %ul.dropdown-menu#filters
+        %li
+          %a.dress-toggle{"data-filter" => "*", :href => "#"} show all
+        %li
+          %a.dress-toggle{"data-filter" => ".silk", :href => "#"} silk
+        %li
+          %a.dress-toggle{"data-filter" => ".polyester", :href => "#"} polyester
+        %li
+          %a.dress-toggle{"data-filter" => ".cashmere", :href => "#"} cashmere
+        %li
+          %a.dress-toggle{"data-filter" => ".cotton", :href => "#"} cotton
 
-
-  .pagination
-    = paginate @dresses 
   #dress_container
-    - @dresses.each do |dress|
-      = render "dress", dress:dress
+    .page
+      - @dresses.each do |dress|
+        = render "dress", dress:dress
+
+  / = paginate @dresses 
+
+
+:javascript
+  (function() {
+    var page = 1,
+        loading = false;
+  
+    function nearBottomOfPage() {
+      return $(window).scrollTop() > $(document).height() - $(window).height() - 200;
+    }
+  
+    $(window).scroll(function(){
+      if (loading) {
+        return;
+      }
+  
+      if(nearBottomOfPage()) {
+        loading=true;
+        page++;
+        $.ajax({
+          url: '/articles?page=' + page,
+          type: 'get',
+          dataType: 'script',
+          success: function() {
+            $(window).sausage('draw');
+            loading=false;
+          }
+        });
+      }
+    });
+  
+    $(window).sausage();
+  }());
