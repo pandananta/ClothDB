@@ -15,7 +15,6 @@
 //= require jquery.isotope.min
 //= require jquery.fancybox.js
 //= require jquery.zoom.js
-//= require jquery.sausage.js
 //= require bootstrap
 
 
@@ -27,30 +26,19 @@ $(document).ready(function() {
 
 	$.fancybox.showLoading();
 
-	$('img')
-        .wrap('<span style="display:inline-block"></span>')
-        .css('display', 'block')
-        .parent()
-        .zoom();
+
 });
-
-//////////////////////////////////////////////////////////
-
 
 var $container = $('#dress_container');
 
 $container.isotope({
-  itemSelector : '.card',
-  sortBy : 'random'
+  itemSelector : '.card'
   
 });
 
 
-//////////////////////////////////////////////////////////
-
 $('.dropdown-toggle').dropdown()
 
-//////////////////////////////////////////////////////////
 // filter items when filter link is clicked
 $('#filters a').click(function(){
   var selector = $(this).attr('data-filter');
@@ -58,4 +46,3 @@ $('#filters a').click(function(){
   return false;
 });
 
-//////////////////////////////////////////////////////////

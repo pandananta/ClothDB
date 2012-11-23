@@ -17,7 +17,7 @@ class DressesController < ApplicationController
     #   format.json { render json: @dresses }
     # end
 
-     @dresses = Dress.order(:created_at).page(params[:page])
+    @dresses = Dress.order(:created_at).page(params[:page])
 
     respond_to do |format|
       format.js

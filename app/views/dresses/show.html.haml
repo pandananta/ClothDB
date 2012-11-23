@@ -2,8 +2,7 @@
 
 
 #dress-attibutes
-  .dress-image-wrapper
-    %img{:src => @dress.image}/
+  %img.dress-image{:src => @dress.image}/
   .info
     %img.logo{:src => "http://assets.bloomingdales.com/img/nav/r09/topnav/l_mainLogo.gif"}/
     %br
@@ -23,5 +22,10 @@
     %p
       = link_to "Buy", @dress.source, :target => "_blank", :class=> "btn btn-success" 
 
-
-
+/*https://github.com/jackmoore/zoom*/
+:javascript
+  $('img.dress-image')
+  .wrap('<span style="display:inline-block"></span>')
+  .css('display', 'block')
+  .parent()
+  .zoom();
