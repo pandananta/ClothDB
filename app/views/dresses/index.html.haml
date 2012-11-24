@@ -17,8 +17,6 @@
           %a.dress-toggle{"data-filter" => ".cotton", :href => "#"} cotton
 
   #dress_container
-    .page
-      - @dresses.each do |dress|
-        = render "dress", dress:dress
+    = render @dresses
+  = paginate @dresses 
 
-  / = paginate @dresses 

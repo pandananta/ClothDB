@@ -1,0 +1,6 @@
+$('#dress_container').isotope('insert', $('<%= j render(@dresses) %>'));
+<% if @dresses.current_page < @dresses.num_pages %>
+	$('#dresses .pagination').replaceWith('<%= j paginate(@dresses) %>');
+<% else %>
+	$('#dresses .pagination').html('<li class="active"><a href="#">No more dresses to load</a></li>');
+<% end %>

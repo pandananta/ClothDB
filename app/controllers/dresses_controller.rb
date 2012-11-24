@@ -11,18 +11,11 @@ class DressesController < ApplicationController
   # GET /dresses
   # GET /dresses.json
   def index
-    # @dresses = apply_scopes(Dress).page(params[:page])
-    # respond_to do |format|
-    #   format.html # index.html.erb
-    #   format.json { render json: @dresses }
-    # end
-
-    @dresses = Dress.order(:created_at).page(params[:page])
-
+    @dresses = apply_scopes(Dress).page(params[:page]).per(10)
     respond_to do |format|
       format.js
       format.html # index.html.erb
-      format.xml  { render :xml => @dresses }
+      format.json { render json: @dresses }
     end
   end
 
