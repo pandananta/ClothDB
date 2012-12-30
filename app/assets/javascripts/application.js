@@ -34,7 +34,8 @@ $(document).ready(function() {
 var $container = $('#dress_container');
 
 $container.isotope({
-  itemSelector : '.card'
+  itemSelector : '.card',    
+  layoutMode : 'fitRows'
   
 });
 
@@ -47,4 +48,22 @@ $('#filters a').click(function(){
   $container.isotope({ filter: selector });
   return false;
 });
+
+// filter items when filter link is clicked
+// $('#filters a').click(function(){
+//   var selector = $(this).attr('data-filter');
+ 
+
+//   	var url = window.location.href;    
+// 	if (url.indexOf('?') > -1){
+// 	   url += '&';
+
+// 	}else{
+// 	   url += '?';
+// 	}
+// 	url+=selector;
+// 	console.log(url);
+// 	window.location.href = url;
+//   return false;
+// });
 
