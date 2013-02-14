@@ -7,10 +7,15 @@
   %body
     .container
       #header
-        %h1
-          = link_to 'clothDB', root_path, id: 'logo'
-        %h2
-          beta 
+        .logo-box
+        
+          %img.cdb{:src => "logo.png", :class => "animated tada"}/
+
+          / %h1
+          /   = link_to 'ClothDB', root_path, :id => "logo", :class => "animated tada"
+        .beta-box
+          %h2
+            beta 
       #logo_line
       
       = yield

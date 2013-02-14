@@ -4,21 +4,24 @@
 #dress-attibutes
   %img.dress-image{:src => @dress.image}/
   .info
-    %img.logo{:src => "http://assets.bloomingdales.com/img/nav/r09/topnav/l_mainLogo.gif"}/
-    %br
+    / %img.cdb-logo{:src => "http://assets.bloomingdales.com/img/nav/r09/topnav/l_mainLogo.gif"}/
+    / %br
     %p
       %b
         = @dress.title
     %p
       by
       = @dress.brand 
-      $$$
     %p
       %b Fabric:
       = @dress.fabric    
     %p
       %b Sizing:
-      = @dress.sizing  
+      = @dress.sizing
+    %p
+      %b Price rating:
+      $$
+            
     %p
       = link_to "Buy", @dress.image, :target => "_blank", :class=> "btn btn-success" 
 

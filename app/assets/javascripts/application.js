@@ -17,6 +17,8 @@
 //= require jquery.zoom.js
 //= require bootstrap
 
+
+
 //= require_tree ./
 
 
@@ -27,7 +29,6 @@ $(document).ready(function() {
 	});
 
 	$.fancybox.showLoading();
-
 
 });
 
@@ -48,6 +49,9 @@ $('#filters a').click(function(){
   $container.isotope({ filter: selector });
   return false;
 });
+
+
+
 
 // filter items when filter link is clicked
 // $('#filters a').click(function(){
