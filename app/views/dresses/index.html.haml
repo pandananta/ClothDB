@@ -24,13 +24,15 @@
         %li
           %a.dress-toggle{"data-filter" => "*", :href => "#"} show all
         %li
-          %a.dress-toggle{"data-filter" => ".silk", :href => "#"} silk
+          %a.dress-toggle{"data-filter" => ".red", :href => "#"} red
         %li
-          %a.dress-toggle{"data-filter" => ".polyester", :href => "#"} polyester
+          %a.dress-toggle{"data-filter" => ".blue", :href => "#"} blue
         %li
-          %a.dress-toggle{"data-filter" => ".cashmere", :href => "#"} cashmere
+          %a.dress-toggle{"data-filter" => ".green", :href => "#"} green
         %li
-          %a.dress-toggle{"data-filter" => ".cotton", :href => "#"} cotton
+          %a.dress-toggle{"data-filter" => ".purple", :href => "#"} purple
+        %li
+          %a.dress-toggle{"data-filter" => ".neutral", :href => "#"} neutral
 
     .btn-group
       %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
@@ -40,13 +42,11 @@
         %li
           %a.dress-toggle{"data-filter" => "*", :href => "#"} show all
         %li
-          %a.dress-toggle{"data-filter" => ".silk", :href => "#"} silk
+          %a.dress-toggle{"data-filter" => ".above-knee", :href => "#"} above knee
         %li
-          %a.dress-toggle{"data-filter" => ".polyester", :href => "#"} polyester
+          %a.dress-toggle{"data-filter" => ".knee", :href => "#"} knee length
         %li
-          %a.dress-toggle{"data-filter" => ".cashmere", :href => "#"} cashmere
-        %li
-          %a.dress-toggle{"data-filter" => ".cotton", :href => "#"} cotton
+          %a.dress-toggle{"data-filter" => ".below-knee", :href => "#"} below knee
 
     .btn-group
       %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
@@ -56,13 +56,12 @@
         %li
           %a.dress-toggle{"data-filter" => "*", :href => "#"} show all
         %li
-          %a.dress-toggle{"data-filter" => ".silk", :href => "#"} silk
+          %a.dress-toggle{"data-filter" => ".v", :href => "#"} V-neck
         %li
-          %a.dress-toggle{"data-filter" => ".polyester", :href => "#"} polyester
+          %a.dress-toggle{"data-filter" => ".scoop", :href => "#"} scoop-neck
         %li
-          %a.dress-toggle{"data-filter" => ".cashmere", :href => "#"} cashmere
-        %li
-          %a.dress-toggle{"data-filter" => ".cotton", :href => "#"} cotton
+          %a.dress-toggle{"data-filter" => ".conservative", :href => "#"} conservative
+
 
     .btn-group
       %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
@@ -72,13 +71,12 @@
         %li
           %a.dress-toggle{"data-filter" => "*", :href => "#"} show all
         %li
-          %a.dress-toggle{"data-filter" => ".silk", :href => "#"} silk
+          %a.dress-toggle{"data-filter" => ".sleeveless", :href => "#"} sleeveless
         %li
-          %a.dress-toggle{"data-filter" => ".polyester", :href => "#"} polyester
+          %a.dress-toggle{"data-filter" => ".short", :href => "#"} short
         %li
-          %a.dress-toggle{"data-filter" => ".cashmere", :href => "#"} cashmere
-        %li
-          %a.dress-toggle{"data-filter" => ".cotton", :href => "#"} cotton
+          %a.dress-toggle{"data-filter" => ".past-elbow", :href => "#"} past elbow
+
 
     .btn-group
       %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
@@ -86,15 +84,13 @@
         %span.caret
       %ul.dropdown-menu#filters
         %li
-          %a.dress-toggle{"data-filter" => "*", :href => "#"} show all
+          %a.dress-toggle{"data-filter" => "*", :href => "#{}"} show all
         %li
-          %a.dress-toggle{"data-filter" => ".silk", :href => "#"} silk
+          %a.dress-toggle{"data-filter" => ".1", :href => "#"} $
         %li
-          %a.dress-toggle{"data-filter" => ".polyester", :href => "#"} polyester
+          %a.dress-toggle{"data-filter" => ".2", :href => "#"} $$
         %li
-          %a.dress-toggle{"data-filter" => ".cashmere", :href => "#"} cashmere
-        %li
-          %a.dress-toggle{"data-filter" => ".cotton", :href => "#"} cotton
+          %a.dress-toggle{"data-filter" => ".3", :href => "#"} $$$
 
   #dress_container
     = render @dresses
