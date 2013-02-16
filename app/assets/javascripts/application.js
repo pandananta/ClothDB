@@ -21,7 +21,7 @@
 
 //= require_tree ./
 
-
+console.log("point 1");
 
 
 $(document).ready(function() {	
@@ -30,6 +30,8 @@ $(document).ready(function() {
 	});
 
 	$.fancybox.showLoading();
+
+	console.log("point 2");
 
 
 
@@ -43,6 +45,7 @@ $container.isotope({
   
 });
 
+console.log("point 3");
 
 $('.dropdown-toggle').dropdown()
 
