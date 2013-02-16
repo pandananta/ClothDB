@@ -8,11 +8,10 @@
     .container
       #header
         .logo-box
-        
-          %img.cdb{:src => "logo.png", :class => "animated tada"}/
+          = link_to root_path do
+            =image_tag "logo.png", :class => "cdb"
+          / %img.cdb{:src => "logo.png", :class => "animated tada"}/
 
-          / %h1
-          /   = link_to 'ClothDB', root_path, :id => "logo", :class => "animated tada"
         .beta-box
           %h2
             beta 

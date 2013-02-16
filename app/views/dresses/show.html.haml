@@ -16,14 +16,14 @@
       %b Fabric:
       = @dress.fabric    
     %p
-      %b Sizing:
-      = @dress.sizing
+      %b Sold at:
+      = @dress.source
     %p
       %b Price rating:
       $$
             
     %p
-      = link_to "Buy", @dress.image, :target => "_blank", :class=> "btn btn-success" 
+      = link_to "Buy", @dress.url, :target => "_blank", :class=> "btn btn-success" 
 
 /*https://github.com/jackmoore/zoom*/
 :javascript

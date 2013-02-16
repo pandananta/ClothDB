@@ -26,7 +26,13 @@
         %li
           %a.dress-toggle{"data-filter" => ".red", :href => "#"} red
         %li
+          %a.dress-toggle{"data-filter" => ".pink", :href => "#"} pink
+        %li
+          %a.dress-toggle{"data-filter" => ".orange", :href => "#"} orange
+        %li
           %a.dress-toggle{"data-filter" => ".blue", :href => "#"} blue
+        %li
+          %a.dress-toggle{"data-filter" => ".yellow", :href => "#"} yellow
         %li
           %a.dress-toggle{"data-filter" => ".green", :href => "#"} green
         %li
@@ -86,11 +92,14 @@
         %li
           %a.dress-toggle{"data-filter" => "*", :href => "#{}"} show all
         %li
-          %a.dress-toggle{"data-filter" => ".1", :href => "#"} $
+          %a.dress-toggle{"data-filter" => ".1", :href => "#"} under $50
         %li
-          %a.dress-toggle{"data-filter" => ".2", :href => "#"} $$
+          %a.dress-toggle{"data-filter" => ".2", :href => "#"} $50-$69
         %li
-          %a.dress-toggle{"data-filter" => ".3", :href => "#"} $$$
+          %a.dress-toggle{"data-filter" => ".3", :href => "#"} $70-$99
+        %li
+          %a.dress-toggle{"data-filter" => ".4", :href => "#"} over $100
+
 
   #dress_container
     = render @dresses

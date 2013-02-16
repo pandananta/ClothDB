@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121115184930) do
+ActiveRecord::Schema.define(:version => 20130216061316) do
 
   create_table "administrators", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(:version => 20121115184930) do
     t.string   "sleeve_type"
     t.string   "skirt_type"
     t.string   "skirt_length"
+    t.string   "color"
+    t.string   "url"
   end
 
   create_table "rails_admin_histories", :force => true do |t|

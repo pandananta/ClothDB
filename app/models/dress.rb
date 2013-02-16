@@ -1,6 +1,6 @@
 class Dress < ActiveRecord::Base
   attr_accessible :source, :title, :brand, :sizing, :image, :price, :fans, 
-  :fabric, :neck_type, :sleeve_type, :skirt_type, :skirt_length
+  :fabric, :neck_type, :sleeve_type, :skirt_type, :skirt_length, :color, :url
   
   #lets me filter by each thingy, putting parameters in the URL
   scope :by_brand, proc { |brand| where(:brand => brand) }
