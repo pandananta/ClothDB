@@ -20,8 +20,9 @@ class DressParser < ActiveRecord::Base
 		#parses file into and array of hashes with the dress attributes from each row
 		#returns array  E.G [{source: 1, name: 'bigdress'}, {source: 2, name: 'mediumdress'}, {source: 3, name: 'littledress'}]
 	
-		@workbook = Spreadsheet.open("../../Desktop/STAGIN dress spreadsheet.xls")
-		# @workbook = Spreadsheet.open(spreadsheet_file)
+		# @workbook = Spreadsheet.open("../../Desktop/STAGIN dress spreadsheet.xls")
+		
+		@workbook = Spreadsheet.open(spreadsheet_file)
 		@worksheet = @workbook.worksheet(0)
 		dress_attribute_array = []
 		keys = @worksheet.row(0)

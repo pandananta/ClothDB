@@ -14,9 +14,9 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require jquery.isotope.min.js
-//= require jquery.fancybox.js
 //= require jquery.zoom.js
-
+//= require jquery.mousewheel-3.0.6.pack.js
+//= require jquery.fancybox.js
 
 
 
