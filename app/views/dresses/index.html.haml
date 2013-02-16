@@ -2,25 +2,13 @@
   #filter_panel
     .btn-group
       %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-        Fabric
-        %span.caret
-      %ul.dropdown-menu#filters
-        %li
-          %a.dress-toggle{"data-filter" => "*", :href => "#"} show all
-        %li
-          %a.dress-toggle{"data-filter" => ".silk", :href => "#"} silk
-        %li
-          %a.dress-toggle{"data-filter" => ".polyester", :href => "#"} polyester
-        %li
-          %a.dress-toggle{"data-filter" => ".cotton", :href => "#"} cotton
-
-    .btn-group
-      %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
         Color
         %span.caret
       %ul.dropdown-menu#filters
         %li
           %a.dress-toggle{"data-filter" => "*", :href => "#"} show all
+        %li
+          %a.dress-toggle{"data-filter" => ".neutral", :href => "#"} neutral
         %li
           %a.dress-toggle{"data-filter" => ".red", :href => "#"} red
         %li
@@ -33,9 +21,23 @@
           %a.dress-toggle{"data-filter" => ".yellow", :href => "#"} yellow
         %li
           %a.dress-toggle{"data-filter" => ".green", :href => "#"} green
-        %li
-          %a.dress-toggle{"data-filter" => ".neutral", :href => "#"} neutral
+        
 
+    .btn-group
+      %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+        Fabric
+        %span.caret
+      %ul.dropdown-menu#filters
+        %li
+          %a.dress-toggle{"data-filter" => "*", :href => "#"} show all
+        %li
+          %a.dress-toggle{"data-filter" => ".polyester", :href => "#"} polyester
+        %li
+          %a.dress-toggle{"data-filter" => ".cotton", :href => "#"} cotton
+        %li
+          %a.dress-toggle{"data-filter" => ".silk", :href => "#"} silk
+
+    
     .btn-group
       %a.btn.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
         Length

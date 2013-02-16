@@ -13,13 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.isotope.min
-//= require jquery.fancybox.js
-//= require jquery.zoom.js
+//= require jquery.fancybox
+//= require jquery.zoom
 //= require bootstrap
 
 
 
 //= require_tree ./
+
 
 
 
@@ -29,6 +30,8 @@ $(document).ready(function() {
 	});
 
 	$.fancybox.showLoading();
+
+
 
 });
 
