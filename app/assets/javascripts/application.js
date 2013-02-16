@@ -12,10 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.isotope.min
-//= require jquery.fancybox
-//= require jquery.zoom
 //= require bootstrap
+//= require jquery.isotope.min.js
+//= require jquery.fancybox.js
+//= require jquery.zoom.js
+
 
 
 
@@ -24,18 +25,6 @@
 console.log("point 1");
 
 
-$(document).ready(function() {	
-	$(".fancybox").fancybox({
-		minWidth : 550,
-	});
-
-	$.fancybox.showLoading();
-
-	console.log("point 2");
-
-
-
-});
 
 var $container = $('#dress_container');
 
@@ -57,6 +46,18 @@ $('#filters a').click(function(){
 });
 
 
+$(document).ready(function() {	
+	$(".fancybox").fancybox({
+		minWidth : 550,
+	});
+
+	$.fancybox.showLoading();
+
+	console.log("point 2");
+
+
+
+});
 
 
 // filter items when filter link is clicked
