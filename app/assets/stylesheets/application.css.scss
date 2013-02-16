@@ -198,6 +198,22 @@ br{
 
 }
 
+.pagination a{
+	border:0px;
+	border-color: none;
+}
+
+.pagination a:hover{
+	background-color:#FFFFFF;
+	text-decoration:none;
+	color: #FF1493;
+}
+
+.pagination span{
+	border:0px;
+	border-color: none;
+}
+
 
 
 #notice {
