@@ -4,8 +4,6 @@
 #dress-attibutes
   %img.dress-image{:src => @dress.image}/
   .info
-    / %img.cdb-logo{:src => "http://assets.bloomingdales.com/img/nav/r09/topnav/l_mainLogo.gif"}/
-    / %br
     %p
       %b
         = @dress.title
@@ -18,9 +16,15 @@
     %p
       %b Sold at:
       = @dress.source
+    
+    /* convert price value to visual rating (e.g. 2 = $$) */
+    - foo = ""
+    - value = @dress.price
+    - (0...@dress.price).each do |i|
+      -foo = foo + "$"
     %p
       %b Price rating:
-      $$
+      = foo
             
     %p
       = link_to "Buy", @dress.url, :target => "_blank", :class=> "btn btn-success" 
